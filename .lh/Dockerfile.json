@@ -1,0 +1,22 @@
+{
+    "sourceFile": "Dockerfile",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1744132959327,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1744132982916,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,8 @@\n FROM python:3.12\r\n \r\n # 设置 pip 镜像源\r\n-RUN python -m pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple && \\\r\n-    python -m pip config set global.progress_bar off\r\n+RUN python -m pip config set global.progress_bar off\r\n \r\n # 安装基础依赖\r\n RUN python -m pip install coverage pytest httpx colorama loguru PyYAML \\\r\n     Scrapy tqdm brotli markdown lxml Pillow jsonpath_rw\r\n"
+                }
+            ],
+            "date": 1744132959327,
+            "name": "Commit-0",
+            "content": "FROM python:3.12\r\n\r\n# 设置 pip 镜像源\r\nRUN python -m pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple && \\\r\n    python -m pip config set global.progress_bar off\r\n\r\n# 安装基础依赖\r\nRUN python -m pip install coverage pytest httpx colorama loguru PyYAML \\\r\n    Scrapy tqdm brotli markdown lxml Pillow jsonpath_rw\r\n\r\n# 推荐添加以下优化项\r\nRUN pip cache purge && \\\r\n    find /usr/local -type f -name '*.pyc' -delete && \\\r\n    find /usr/local -type d -name '__pycache__' -delete"
+        }
+    ]
+}
