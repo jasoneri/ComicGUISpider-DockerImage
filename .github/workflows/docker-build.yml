@@ -31,5 +31,5 @@ jobs:
         context: .
         push: true
         tags: |
-          ghcr.io/${{ github.repository }}:ComicGUISpider
-          ghcr.io/${{ github.repository }}:latest
+          ghcr.io/jasoneri/comicguispider-dockerimage:${{ github.sha }}
+          ghcr.io/jasoneri/comicguispider-dockerimage:latest
