@@ -1,5 +1,10 @@
 FROM python:3.12
 
+# 安装Node.js最新版
+RUN curl -fsSL https://deb.nodesource.com/setup_current.x | bash - && \
+    apt-get install -y nodejs && \
+    npm install -g npm@latest
+
 # 设置 pip 镜像源
 RUN python -m pip config set global.progress_bar off
 

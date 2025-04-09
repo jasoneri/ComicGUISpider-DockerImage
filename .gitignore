@@ -1,0 +1,31 @@
+# self
+analyze/
+*.d
+*.zip
+*demo*.py
+__temp
+test/*
+.lh/*
+# self/build
+*.ico
+*.qrc
+src/
+temp
+requirements-in.txt
+untitled*
+Pipfile
+Pipfile.lock
+codecov*
+*_local.yml
+# self/conf
+gitee_t.json
+conf.yml
+record.db
+# self/desc created html
+desc.html
+docs/*.html
+deploy/launcher/mac/*.html
+# self/bug-report
+_bug_log
+# ide
+.cursor
