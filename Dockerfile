@@ -10,7 +10,7 @@ RUN python -m pip config set global.progress_bar off
 
 # 安装基础依赖
 RUN python -m pip install coverage pytest httpx colorama loguru PyYAML \
-    Scrapy tqdm brotli markdown lxml Pillow jsonpath_rw
+    Scrapy tqdm brotli markdown lxml Pillow jsonpath_rw PyExecJS
 
 # 推荐添加以下优化项
 RUN pip cache purge && \
